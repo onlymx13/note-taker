@@ -4,7 +4,11 @@ var sourceText;
 var addedSentences = [];
 function takeNotes() {
     keyWords = document.getElementById('keywords').value.split(" ");
+    if (document.getElementById('numberFix').checked) {
+    sourceSentences = document.getElementById('textarea').value.split('. ');
+    } else {
     sourceSentences = document.getElementById('textarea').value.split('.');
+    }
     for (let sentence of sourceSentences) {
         sourceText = sentence.split(" ");
         if (/[0-9]/.test(sentence)) {
