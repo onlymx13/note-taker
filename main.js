@@ -1,8 +1,11 @@
 var keyWords;
 var sourceSentences;
 var sourceText;
-var addedSentences = [];
 function takeNotes() {
+    var addedSentences = [];
+    while(document.getElementById('list').firstChild) {
+        document.getElementById('list').removeChild(document.getElementById('list').firstChild);
+    }
     keyWords = document.getElementById('keywords').value.split(" ");
     if (document.getElementById('numberFix').checked) {
     sourceSentences = document.getElementById('textarea').value.split('. ');
