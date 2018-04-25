@@ -4,7 +4,7 @@ var sourceText;
 var addedSentences = [];
 function takeNotes() {
     keyWords = document.getElementById('keywords').value.split(" ");
-    sourceSentences = document.getElementById('textarea').value.split('. ');
+    sourceSentences = document.getElementById('textarea').value.split('.');
     for (let sentence of sourceSentences) {
         sourceText = sentence.split(" ");
         if (/[0-9]/.test(sentence)) {
