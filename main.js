@@ -37,6 +37,6 @@ function add(str) {
     list.appendChild(li);
     addedSentences.push(str);
 }
-String.prototype.paraphrase = function(string) {
-    return string;
+String.prototype.paraphrase = function() {
+    return this;
 }
