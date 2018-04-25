@@ -1,7 +1,9 @@
-function takeNotes() {
-var keyWords = document.getElementById('keywords').value.split(" ");
-var sourceSentences = document.getElementById('textarea').value.split(/.!?/);
+var keyWords;
+var sourceSentences;
 var sourceText;
+function takeNotes() {
+keyWords = document.getElementById('keywords').value.split(" ");
+sourceSentences = document.getElementById('textarea').value.split(/.!?/);
 for (var i=0;i<sourceSentences.length;i++) {
     sourceText = sourceSentences[i].split(" ");
     sourceText.forEach(function(element){
