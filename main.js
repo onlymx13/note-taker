@@ -1,8 +1,9 @@
 var keyWords;
 var sourceSentences;
 var sourceText;
+var addedSentences = [];
 function takeNotes() {
-    var addedSentences = [];
+    addedSentences = [];
     while(document.getElementById('list').firstChild) {
         document.getElementById('list').removeChild(document.getElementById('list').firstChild);
     }
@@ -25,13 +26,17 @@ function takeNotes() {
     }
 }
 function add(str) {
+    var myString = str.paraphrase();
     if (addedSentences.indexOf(str) != -1)
         return;
-    console.log(str);
+    console.log(myString);
     var list = document.getElementById('list');
     var li = document.createElement('li');
-    var textnode = document.createTextNode(str);
+    var textnode = document.createTextNode(myString);
     li.appendChild(textnode);
     list.appendChild(li);
     addedSentences.push(str);
+}
+String.prototype.paraphrase = function(string) {
+    return string;
 }
