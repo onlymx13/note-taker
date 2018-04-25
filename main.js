@@ -18,7 +18,9 @@ function takeNotes() {
 }
 function add(str) {
     console.log(str);
-    var p = document.createElement('p');
-    p.innerHTML = str;
-    document.insertBefore(p,null);
+    var list = document.getElementById('list');
+    var li = document.createElement('li');
+    var textnode = document.createTextNode(str);
+    li.appendChild(textnode);
+    list.appendChild(li);
 }
