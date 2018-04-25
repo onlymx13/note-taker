@@ -1,9 +1,10 @@
 var keyWords;
 var sourceSentences;
 var sourceText;
+var sentenceregex = /.!?/;
 function takeNotes() {
     keyWords = document.getElementById('keywords').value.split(" ");
-    sourceSentences = document.getElementById('textarea').value.split(/.!?/);
+    sourceSentences = document.getElementById('textarea').value.split(sentenceregex);
     for (let sentence of sourceSentences) {
         sourceText = sentence.split(" ");
         if (/[0-9]/.test(sentence)) {
