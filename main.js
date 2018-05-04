@@ -9,7 +9,7 @@ function takeNotes() {
     }
     keyWords = document.getElementById('keywords').value.split(" ");
     if (document.getElementById('numberFix').checked) {
-    sourceSentences = document.getElementById('textarea').value.split('. ');
+    sourceSentences = document.getElementById('textarea').value.split('. ').concat(document.getElementById('textarea').value.split('.\n'));
     } else {
     sourceSentences = document.getElementById('textarea').value.split('.');
     }
